@@ -1,23 +1,35 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andrew | Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Привіт, я Andrew 👋</h1>
+    <p>Web3 ентузіаст • Вчу Python, JavaScript, Solidity</p>
+    <a id="contactBtn" href="#">Зв’язатися</a>
+  </header>
 
-contract MiniToken {
-    string public name = "MiniToken";
-    string public symbol = "MINI";
-    uint8  public decimals = 18;
-    uint256 public totalSupply;
+  <main>
+    <section>
+      <h2>Про мене</h2>
+      <p>Працюю з крипто-інструментами, вчуся контриб’ютити в open-source.</p>
+    </section>
 
-    mapping(address => uint256) public balanceOf;
+    <section>
+      <h2>Проєкти</h2>
+      <ul>
+        <li><a href="#">My Crypto Tools</a></li>
+        <li><a href="#">Useful Scripts</a></li>
+        <li><a href="#">Solidity Examples</a></li>
+      </ul>
+    </section>
+  </main>
 
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
-    constructor(uint256 initialSupply) {
-        totalSupply = initialSupply * (10 ** uint256(decimals));
-        balanceOf[msg.sender] = totalSupply;
-        emit Transfer(address(0), msg.sender, totalSupply);
-    }
-
-    function transfer(address to, uint256 value) external returns (bool) {
-        require(balanceOf[msg.sender] >= value, "Insufficient");
-        unchecked {
-            balanceOf[msg.sender]
+  <footer><small>© 2025 Andrew. Усі права захищено.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
